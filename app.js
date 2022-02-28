@@ -1,0 +1,1 @@
+console.log('Mano spart phone is connected');
