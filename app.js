@@ -6,6 +6,8 @@ const loadingSpinner = displayStyle => {
 const togglePhoneDetail = displayStyle => {
     document.getElementById('phone-details').style.display = displayStyle;
 }
+// search field error
+const error = document.getElementById("error");
 // search field
 const searchPhone = () => {
     const searchFeald = document.getElementById('search-field');
@@ -14,7 +16,6 @@ const searchPhone = () => {
     togglePhoneDetail('none');
     const searchText = searchFeald.value;
     searchFeald.value = '';
-    const error = document.getElementById("error");
     if (searchText == '') {
         error.innerText = "Please enter a Phone name to search";
         searchFeald.value = '';
@@ -63,6 +64,7 @@ const displaySearchResult = data => {
 }
 // load phone detail from api
 const loadPhoneDetail = slug => {
+    error.innerText = '';
     const url = `https://openapi.programming-hero.com/api/phone/${slug}`;
     fetch(url)
         .then(res => res.json())
