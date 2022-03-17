@@ -46,7 +46,7 @@ const displaySearchResult = data => {
             const div = document.createElement('div');
             div.classList.add('col');
             div.innerHTML = `
-            <div class="card h-100">
+            <div class="card h-100 search-cart">
                 <div class="d-flex align-items-center justify-content-center">
                 <img src="${data.image}" class="card-img-top w-75" alt="...">
                 </div>
@@ -75,7 +75,7 @@ const displayPhoneDetail = phone => {
     const phoneDetail = document.getElementById('phone-details');
     phoneDetail.textContent = '';
     const div = document.createElement('div');
-    div.classList.add('card');
+    div.classList.add('card', 'detail-cart');
     div.innerHTML = `
     <div class="row g-0">
                 <div class="col-md-4 d-flex align-items-center justify-content-center">
